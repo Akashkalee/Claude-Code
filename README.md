@@ -38,10 +38,9 @@ Command	Description	Example
 | `claude "query"` | Start interactive session with initial prompt | claude "explain this project" |
 | `claude -p "query"` | Query via SDK, then exit | claude -p "explain this function" |
 | `cat file \| claude -p "query"` | Process piped content | cat log.txt \| claude -p "explain" |
-| `claude -c `| Start interactive session | claude |
-| claude | Start interactive session | claude |
-| claude | Start interactive session | claude |
-| claude | Start interactive session | claude |
+| `claude -c `| Continue most recent conversation in current directory | claude -c |
+| `claude -c -p "query"` | Continue via SDK | claude -c -p "Check for type errors" |
+|`claude -r "<session>" "query"` | Resume session by ID or name | claude -r "auth refactor" "Finish this PR" |
 | claude | Start interactive session | claude |
 | claude | Start interactive session | claude |
 | claude | Start interactive session | claude |
