@@ -26,26 +26,28 @@ MCP uses a client-server model:
 The communication flows through secure channels using stdio (for local apps), HTTP, or WebSocket (for remote services).
 
 ## Key Components
-1. Resources
-Resources are pieces of data that servers expose — files, documents, database records, API responses. Instead of Claude requesting random data, resources are explicitly listed and sampled on demand. This makes the protocol efficient and safe because:
 
- - Only needed data is transferred
- - Clear boundaries on what's accessible
- - Servers can enforce permissions
+#### 1. Resources
+Resources are pieces of data that servers expose — files, documents, database records, API responses. Instead of Claude requesting random data, resources are explicitly listed and sampled on demand. This makes the protocol efficient and safe because:
+  - Only needed data is transferred
+  - Clear boundaries on what's accessible
+  - Servers can enforce permissions
+
 Example: Gmail server exposes resources like gmail://messages/123, gmail://labels/INBOX
 
-2. Tools
+#### 2. Tools
 Tools are functions Claude can call to perform actions. They're like API endpoints but declared explicitly with:
 
- - Function name and description
- - Required parameters
- - Expected output format
+  - Function name and description
+  - Required parameters
+  - Expected output format
+
 Example: An Asana tool might be create_task(project_id, title, description) or update_task_status(task_id, status)
 
-3. Prompts
+#### 3. Prompts
 Prompts are reusable instruction templates that servers provide to help Claude work effectively with their data. Instead of Claude guessing how to use a tool, servers can say: "Here's how to write a good task title" or "Here's the context you need to answer questions about our database."
 
-4. Sampling
+#### 4. Sampling
 A key MCP concept: instead of Claude saying "give me everything", the client samples specific resources on demand. It's like saying "I need the email subject and sender, but not the full body" — much more efficient than transferring entire files.
 
 ## How It Actually Works
