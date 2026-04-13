@@ -97,6 +97,7 @@ You can currently connect Claude to:
 
 
 MCP vs. Other Approaches
+| ---- | ---- | ---- | ---- |
 | Aspect |	Traditional API |	Simple Webhooks |	MCP |
 | Standardized?	| No (each API different) |	No	| ✅ Yes |
 | Bidirectional? |	✅ Yes	| No (one-way) |	✅ Yes |
