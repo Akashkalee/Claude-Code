@@ -117,9 +117,9 @@ This means Claude can seamlessly access your entire tool ecosystem with a single
 ### In short:
 MCP is the plumbing that lets Claude safely and efficiently connect to any external tool or data source, with clear boundaries, explicit permissions, and standardized communication. It's what makes "Claude in Claude" and AI-powered integrations possible.
 
-# Understand MCP visually 
+# Understand MCP in better way
 
-<img width="666" height="890" alt="image" src="https://github.com/user-attachments/assets/bc60b9ed-8230-4303-a7df-cd4af17055a4" />
+![MCP (1)](https://github.com/user-attachments/assets/dbad4d35-75b1-4de0-9c75-d488f869d856)
 
 
 
