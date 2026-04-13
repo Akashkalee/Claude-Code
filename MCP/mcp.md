@@ -53,13 +53,13 @@ A key MCP concept: instead of Claude saying "give me everything", the client sam
 ## How It Actually Works
 Let's say you ask Claude: "What are my top priority tasks in Asana?"
 
--- Recognition: Claude sees you mentioned Asana and recognizes it needs to fetch task data
-Tool Discovery: Claude queries the MCP server: "What tools do you have?" → Gets back the list (read tasks, create task, update status, etc.)
-Tool Invocation: Claude calls the tool with parameters: get_tasks(filter: "priority=high")
-Server Processing: The Asana MCP server authenticates, queries the Asana API, and returns matching tasks
-Result Sampling: The server sends back task names, due dates, priority levels (only what's needed)
-Claude Processes: Claude reads the results and creates a human-friendly response
-Response: You get "You have 3 high-priority tasks: Design system review (due tomorrow), Client presentation (due Friday)..."
+ - Recognition: Claude sees you mentioned Asana and recognizes it needs to fetch task data
+ - Tool Discovery: Claude queries the MCP server: "What tools do you have?" → Gets back the list (read tasks, create task, update status, etc.)
+ - Tool Invocation: Claude calls the tool with parameters: get_tasks(filter: "priority=high")
+ - Server Processing: The Asana MCP server authenticates, queries the Asana API, and returns matching tasks
+ - Result Sampling: The server sends back task names, due dates, priority levels (only what's needed)
+ - Claude Processes: Claude reads the results and creates a human-friendly response
+ - Response: You get "You have 3 high-priority tasks: Design system review (due tomorrow), Client presentation (due Friday)..."
 
 ## Key Benefits
 ### Security:
