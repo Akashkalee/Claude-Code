@@ -34,14 +34,20 @@ Command	Description	Example
 
 | Command | Description | Example |
 | --- | --- | --- |
-| `claude` | Start interactive session | claude |
-| `claude "query"` | Start interactive session with initial prompt | claude "explain this project" |
-| `claude -p "query"` | Query via SDK, then exit | claude -p "explain this function" |
-| `cat file \| claude -p "query"` | Process piped content | cat log.txt \| claude -p "explain" |
-| `claude -c `| Continue most recent conversation in current directory | claude -c |
-| `claude -c -p "query"` | Continue via SDK | claude -c -p "Check for type errors" |
-|`claude -r "<session>" "query"` | Resume session by ID or name | claude -r "auth refactor" "Finish this PR" |
-| claude | Start interactive session | claude |
-| claude | Start interactive session | claude |
-| claude | Start interactive session | claude |
-| claude | Start interactive session | claude |
+| `claude` | Start interactive session | `claude` |
+| `claude "query"` | Start interactive session with initial prompt | `claude "explain this project"` |
+| `claude -p "query"` | Query via SDK, then exit | `claude -p "explain this function"` |
+| `cat file \| claude -p "query"` | Process piped content | `cat log.txt \| claude -p "explain"` |
+| `claude -c `| Continue most recent conversation in current directory | `claude -c` |
+| `claude -c -p "query"` | Continue via SDK | `claude -c -p "Check for type errors"` |
+|`claude -r "<session>" "query"` | Resume session by ID or name | `claude -r "auth refactor" "Finish this PR"` |
+| `claude update` | Update to latest version | `claude update` |
+| `claude auth logout` | Sign in to your Anthropic account. Use `--email` to pre-fill your email address, `--sso` to force SSO authentication, and `--console` to sign in with Anthropic Console for API usage billing instead of a Claude subscription | `claude auth login --console` |
+| `claude auth logout` | Log out from your Anthropic account | `claude auth logout` |
+| `claude auth status` | Show authentication session as JSON. Use `--text` for human-readable output. Exits with code 0 if logged in, 1 if not | `claude auth status` |
+| `claude agents` | List all configured subagents, grouped by source | `claude agents` |
+| `claude auto-mode defaults` | Print the built-in auto mode classifier rules as JSON. Use claude auto-mode config to see your effective config with settings applied | `claude auto-mode defaults > rules.json` |
+| `claude mcp` | Configure Model Context Protocol (MCP) servers | `claude mcp add --transport http asana https://mcp.asana.com/v2/mcp` |
+| `claude plugin` | Manage Claude Code plugins. Alias: claude plugins. See plugin reference for subcommands | `claude plugin install code-review@claude-plugins-official ` |
+| claude remote-control | Start a Remote Control server to control Claude Code from Claude.ai or the Claude app. Runs in server mode (no local interactive session). See Server mode flags | `claude remote-control --name "My Project"` |
+| claude setup-token | Generate a long-lived OAuth token for CI and scripts. Prints the token to the terminal without saving it. Requires a Claude subscription. See Generate a long-lived token  |`claude setup-token`  |
