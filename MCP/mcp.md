@@ -1,3 +1,2 @@
 # What is MCP?
-
-[MCP official website](https://modelcontextprotocol.io/docs/getting-started/intro)
+[MCP official documentation](https://modelcontextprotocol.io/docs/getting-started/intro)
