@@ -5,40 +5,41 @@
 ## What is the Model Context Portocol (MCP)?
 <img width="826" height="431" alt="image" src="https://github.com/user-attachments/assets/1a4db2d4-eb84-4e09-877e-56b1afc4444c" />
 
-### What is MCP?
+## What is MCP?
 Model Context Protocol (MCP) is an open-source standardized protocol developed by Anthropic that enables AI models (like Claude) to safely access external tools, data sources, and services. Think of it as a universal adapter that allows Claude to connect to thousands of applications without needing custom integrations for each one.
 
-#### The Problem MCP Solves
+### The Problem MCP Solves
 Before MCP, if you wanted Claude to interact with external services (like Asana, Gmail, databases), you'd need:
-- Custom code for each integration
-- Complex security handling
-- Difficulty scaling to many services
-- No standardization
+ - Custom code for each integration
+ - Complex security handling
+ - Difficulty scaling to many services
+ - No standardization
 MCP solves this with a single, unified protocol.
 
-### Core Architecture
+## Core Architecture
+
 MCP uses a client-server model:
 
-- Client: Claude or your application (e.g., Claude.ai, Claude API in your app)
-- Server: The MCP server that wraps an external service (Gmail, Asana, custom APIs)
-- Protocol: JSON-RPC (standardized message format) over secure transports
+ - Client: Claude or your application (e.g., Claude.ai, Claude API in your app)
+ - Server: The MCP server that wraps an external service (Gmail, Asana, custom APIs)
+ - Protocol: JSON-RPC (standardized message format) over secure transports
 The communication flows through secure channels using stdio (for local apps), HTTP, or WebSocket (for remote services).
 
-### Key Components
+## Key Components
 1. Resources
 Resources are pieces of data that servers expose — files, documents, database records, API responses. Instead of Claude requesting random data, resources are explicitly listed and sampled on demand. This makes the protocol efficient and safe because:
 
-- Only needed data is transferred
-- Clear boundaries on what's accessible
-- Servers can enforce permissions
+ - Only needed data is transferred
+ - Clear boundaries on what's accessible
+ - Servers can enforce permissions
 Example: Gmail server exposes resources like gmail://messages/123, gmail://labels/INBOX
 
 2. Tools
 Tools are functions Claude can call to perform actions. They're like API endpoints but declared explicitly with:
 
-- Function name and description
-- Required parameters
-- Expected output format
+ - Function name and description
+ - Required parameters
+ - Expected output format
 Example: An Asana tool might be create_task(project_id, title, description) or update_task_status(task_id, status)
 
 3. Prompts
@@ -47,7 +48,7 @@ Prompts are reusable instruction templates that servers provide to help Claude w
 4. Sampling
 A key MCP concept: instead of Claude saying "give me everything", the client samples specific resources on demand. It's like saying "I need the email subject and sender, but not the full body" — much more efficient than transferring entire files.
 
-### How It Actually Works
+## How It Actually Works
 Let's say you ask Claude: "What are my top priority tasks in Asana?"
 
 -- Recognition: Claude sees you mentioned Asana and recognizes it needs to fetch task data
