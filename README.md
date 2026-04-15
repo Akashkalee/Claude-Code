@@ -71,18 +71,17 @@ Customize claude code behavior with these command-line flags. claude --help does
 | `--chrome` | Enable Chrome browser integration for web automation and testing | `claude --chrome` |
 | `--continue, -c` | Load the most recent conversation in the current directory | `claude --continue` |
 | `--dangerously-load-development-channels` | Enable channels that are not on the approved allowlist, for local development. Accepts plugin:<name>@<marketplace> and server:<name> entries. Prompts for confirmation | `claude --dangerously-load-development-channels server:webhook` |
-| `--dangerously-skip-permissions` |  | `claude` |
-| `` | Skip permission prompts. Equivalent to --permission-mode bypassPermissions. See permission modes for what this does and does not skip  | `claude --dangerously-skip-permissions` |
+| `--dangerously-skip-permissions` | Skip permission prompts. Equivalent to --permission-mode bypassPermissions. See permission modes for what this does and does not skip  | `claude --dangerously-skip-permissions` |
 | `--debug` | Enable debug mode with optional category filtering (for example, "api,hooks" or "!statsig,!file") | `claude --debug "api,mcp"` |
 | `--debug-file <path>` | Write debug logs to a specific file path. Implicitly enables debug mode. Takes precedence over CLAUDE_CODE_DEBUG_LOGS_DIR | `claude --debug-file /tmp/claude-debug.log` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
+| `--disable-slash-commands` | Disable all skills and commands for this session | `claude --disable-slash-commands` |
+| `--disallowedTools` | Tools that are removed from the model’s context and cannot be used | `"Bash(git log *)" "Bash(git diff *)" "Edit"` |
+| `--effort` | Set the effort level for the current session. Options: low, medium, high, max (Opus 4.6 only). Session-scoped and does not persist to settings| `claude --effort high` |
+| `--exclude-dynamic-system-prompt-sections` | Move per-machine sections from the system prompt (working directory, environment info, memory paths, git status) into the first user message. Improves prompt-cache reuse across different users and machines running the same task. Only applies with the default system prompt; ignored when --system-prompt or --system-prompt-file is set. Use with -p for scripted, multi-user workloads | `claude -p --exclude-dynamic-system-prompt-sections "query"` |
+| `--fallback-model` | Enable automatic fallback to specified model when default model is overloaded (print mode only) | `claude -p --fallback-model sonnet "query"` |
+| `--fork-session` | When resuming, create a new session ID instead of reusing the original (use with --resume or --continue) | `claude --resume abc123 --fork-session` |
+| `--from-pr` | Resume sessions linked to a specific GitHub PR. Accepts a PR number or URL. Sessions are automatically linked when created via gh pr create | `claude --from-pr 123` |
+| `--ide` | Automatically connect to IDE on startup if exactly one valid IDE is available | `claude --ide` |
 | `` |  | `claude` |
 | `` |  | `claude` |
 | `` |  | `claude` |
