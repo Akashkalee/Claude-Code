@@ -32,6 +32,5 @@ Here are some of the ways you can use claude code:
 ## CLI Reference
 Complete reference for Claude Code command-line inference, including commands and flags.
 
-### CLI commands
-You can start sessions, pipe content, resume conversations, and manage updates with these commands:
+[CLI commands]()
 
