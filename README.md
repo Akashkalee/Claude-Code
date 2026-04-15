@@ -82,22 +82,22 @@ Customize claude code behavior with these command-line flags. claude --help does
 | `--fork-session` | When resuming, create a new session ID instead of reusing the original (use with --resume or --continue) | `claude --resume abc123 --fork-session` |
 | `--from-pr` | Resume sessions linked to a specific GitHub PR. Accepts a PR number or URL. Sessions are automatically linked when created via gh pr create | `claude --from-pr 123` |
 | `--ide` | Automatically connect to IDE on startup if exactly one valid IDE is available | `claude --ide` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
+| `--init` | Run initialization hooks and start interactive mode  | `claude --init` |
+| `--init-only` | Run initialization hooks and exit (no interactive session) | `claude --init-only` |
+| `--include-hook-events` | Include all hook lifecycle events in the output stream. Requires --output-format stream-json | `claude -p --output-format stream-json --include-hook-events "query"` |
+| `--include-partial-messages` | Include partial streaming events in output. Requires --print and --output-format stream-json  | `claude -p --output-format stream-json --include-partial-messages "query"` |
+| `--input-format` | Specify input format for print mode (options: text, stream-json) | `claude -p --output-format json --input-format stream-json` |
+| `--json-schema` | Get validated JSON output matching a JSON Schema after agent completes its workflow (print mode only, see structured outputs) | `claude -p --json-schema '{"type":"object","properties":{...}}' "query"` |
+| `--maintenance` | Run maintenance hooks and start interactive mode | `claude --maintenance` |
+| `--max-budget-usd` | Maximum dollar amount to spend on API calls before stopping (print mode only) | `claude -p --max-budget-usd 5.00 "query"` |
+| `--max-turns` | Limit the number of agentic turns (print mode only). Exits with an error when the limit is reached. No limit by default | `claude -p --max-turns 3 "query"` |
+| `--mcp-config` | Load MCP servers from JSON files or strings (space-separated) | `claude --mcp-config ./mcp.json` |
+| `--model` | Sets the model for the current session with an alias for the latest model (sonnet or opus) or a model’s full name | `claude --model claude-sonnet-4-6` |
+| `--name, -n` | Set a display name for the session, shown in `/resume` and the terminal title. You can resume a named session with claude --resume <name>. `/rename` changes the name mid-session and also shows it on the prompt bar| `claude -n "my-feature-work"` |
+| `--no-chrome` | Disable Chrome browser integration for this session | `claude --no-chrome` |
+| `--no-session-persistence` | Disable session persistence so sessions are not saved to disk and cannot be resumed (print mode only) | `claude -p --no-session-persistence "query"` |
+| `--output-format` | Specify output format for print mode (options: text, json, stream-json) | `claude -p "query" --output-format json` |
+| `--enable-auto-mode` | Unlock auto mode in the Shift+Tab cycle. Requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6 | `claude --enable-auto-mode` |
+| `--permission-mode` | Begin in a specified permission mode. Accepts default, acceptEdits, plan, auto, dontAsk, or bypassPermissions. Overrides defaultMode from settings files | `claude` |
 | `` |  | `claude` |
 | `` |  | `claude` |
