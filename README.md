@@ -122,9 +122,17 @@ Customize claude code behavior with these command-line flags. claude --help does
 | `--version, -v` | Output the version number | `claude -v` |
 | `--worktree, -w` | Start Claude in an isolated git worktree at <repo>/.claude/worktrees/<name>. If no name is given, one is auto-generated | `claude -w feature-auth` |
 
+### System prompt flags
+Claude Code provides four flags for customizing the system prompt. All four work in both interactive and non-interactive modes.
 
 
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
-| `` |  | `claude` |
+| Flag | Behavior | Example |
+| --- | --- | --- |
+| `--system-prompt` | Replaces the entire default prompt | `claude --system-prompt "You are a Python expert"` |
+| `--system-prompt-file` | Replaces with file contents | `claude --system-prompt-file ./prompts/review.txt` |
+| `--append-system-prompt` | Appends to the default prompt | `claude --append-system-prompt "Always use TypeScript"` |
+| `--append-system-prompt-file` | Appends file contents to the default prompt | `claude --append-system-prompt-file ./style-rules.txt` |
+
+--system-prompt and --system-prompt-file are mutually exclusive. The append flags can be combined with either replacement flag.
+
+For most use cases, use an append flag. Appending preserves Claude Code's built-in capabilities while adding your requirements. Use a replacement flag only when you need complete control over the system prompt.
