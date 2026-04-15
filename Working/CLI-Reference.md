@@ -1,4 +1,4 @@
-### Reference
+
 ## CLI Reference
 Complete reference for Claude Code command-line inference, including commands and flags.
 
