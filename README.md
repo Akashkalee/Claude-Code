@@ -34,3 +34,6 @@ Complete reference for Claude Code command-line inference, including commands an
 
 [CLI Reference Commands](Working/CLI-Reference.md)
 
+### Commands
+
+
