@@ -30,7 +30,7 @@ Here are some of the ways you can use claude code:
 
 ### Reference
 ## CLI Reference
-Complete reference for Claude Code command-line inference, including commands and flags.
+Complete reference for Claude Code command-line inference, including commands and flags are included in below link you can visit the link and learn every reference in detail.
 
-[CLI commands]()
+[CLI Reference Commands](Working/CLI-Reference.md)
 
