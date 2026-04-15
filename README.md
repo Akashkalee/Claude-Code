@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="Working/claude-code-working.md">CLAUDE CODE WORKING</a>
-  <a href="Working/claude-code-working.md">MCP</a>
+  <a href="MCP/mcp.md">MCP</a>
 </p>
 
 ### Intro to Cluade
