@@ -29,10 +29,10 @@ Here are some of the ways you can use claude code:
 
 
 ### Reference
-## CLI Reference
+## [CLI Reference Commands](Working/CLI-Reference.md)
 Complete reference for Claude Code command-line inference, including commands and flags are included in below link you can visit the link and learn every reference in detail.
 
-[CLI Reference Commands](Working/CLI-Reference.md)
+
 
 ### Commands
 
