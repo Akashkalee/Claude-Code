@@ -56,17 +56,49 @@ Command	Description	Example
 ### CLI Flags
 Customize claude code behavior with these command-line flags. claude --help does not list every flag, so a flag's absence from --help does not mean it is unavailable.
 
+| Flag | Description | Example |
+| --- | --- | --- |
 | `--add-dir ` | Add additional working directores for Claude to read and edit files. Grants file access; most `.claude/` configuration is not discovered from these directories. Validates each path exists as a directory | `claude -add-dir ../apps ../lib` |
 | `--agent` | Speacify an agent for the current session (overrides the agent setting | `claude --agent my-custom agent` |
 | `--agents` | Define custom subagents dynamically via JSON. Uses the same field names as subagent frontmatter, plus a prompt field for the agent's instructions | `claude --agnets '{"reviewer": {"description":"Reviews code", "prompt":"You are a code reviewer"}}' ` |
 | `--allow-dangerously-skip-permissions` | Add `bypassPermissions` to the `Shift+Tab` mode cycle without starting in it. Lets you begin in a different mode like `plan` and switch to bypassPermissions later.  | `claude --permission-mode plan --allow-dangerously-skip-permissions` |
 | `--allowedTools` | Tools that execute without prompting for permission. See permission rule syntax for pattern matching. To restrict which tools are available, use --tools instead | `"Bash(git log *)" "Bash(git diff *)" "Read" ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
-| ` ` |   | `claude ` |
+| `--append-system-prompt` | Append custom text to the end of the default system prompt | `claude --append-system-prompt "Always use TypeScript"` |
+| `--bare` | Minimal mode: skip auto-discovery of hooks, skills, plugins, MCP servers, auto memory, and CLAUDE.md so scripted calls start faster. Claude has access to Bash, file read, and file edit tools. | `claude --bare -p "query"` |
+| `--betas` |  | `claude` |
+| `` | Beta headers to include in API requests (API key users only) | `claude --betas interleaved-thinking` |
+| `--channels` | (Research preview) MCP servers whose channel notifications Claude should listen for in this session. Space-separated list of plugin:<name>@<marketplace> entries. Requires Claude.ai authentication | `claude --channels plugin:my-notifier@my-marketplace` |
+| `--chrome` | Enable Chrome browser integration for web automation and testing | `claude --chrome` |
+| `--continue, -c` | Load the most recent conversation in the current directory | `claude --continue` |
+| `--dangerously-load-development-channels` | Enable channels that are not on the approved allowlist, for local development. Accepts plugin:<name>@<marketplace> and server:<name> entries. Prompts for confirmation | `claude --dangerously-load-development-channels server:webhook` |
+| `--dangerously-skip-permissions` |  | `claude` |
+| `` | Skip permission prompts. Equivalent to --permission-mode bypassPermissions. See permission modes for what this does and does not skip  | `claude --dangerously-skip-permissions` |
+| `--debug` | Enable debug mode with optional category filtering (for example, "api,hooks" or "!statsig,!file") | `claude --debug "api,mcp"` |
+| `--debug-file <path>` | Write debug logs to a specific file path. Implicitly enables debug mode. Takes precedence over CLAUDE_CODE_DEBUG_LOGS_DIR | `claude --debug-file /tmp/claude-debug.log` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
+| `` |  | `claude` |
