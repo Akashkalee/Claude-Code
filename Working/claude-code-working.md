@@ -20,5 +20,5 @@ A command-line interface (CLI) that lets you interact with Claude directly from 
   - Refactor existing code
   - Handle git operations (commits, PRs, etc.)
 
-Tool use under the hood — Claude Code uses tools like file read/write, bash execution, and search to act on your behalf. It shows you what it's doing and asks for confirmation on potentially impactful actions.
-MCP support — It supports Model Context Protocol (MCP) servers, so you can extend it with integrations like GitHub, databases, or custom tools.
+#### Tool use under the hood — Claude Code uses tools like file read/write, bash execution, and search to act on your behalf. It shows you what it's doing and asks for confirmation on potentially impactful actions.
+#### MCP support — It supports Model Context Protocol (MCP) servers, so you can extend it with integrations like GitHub, databases, or custom tools.
