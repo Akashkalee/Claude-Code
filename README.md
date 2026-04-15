@@ -34,6 +34,7 @@ Complete reference for Claude Code command-line inference, including commands an
 
 
 
-### Commands
+## [Commands](Working/Commands.md)
+
 
 
