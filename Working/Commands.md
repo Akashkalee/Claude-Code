@@ -1,4 +1,4 @@
-### Reference
+
 ## Commands
 Complete reference for commands available in Claude Code, including built-in commands and bundled skills.
 
