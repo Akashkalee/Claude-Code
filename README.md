@@ -98,6 +98,33 @@ Customize claude code behavior with these command-line flags. claude --help does
 | `--no-session-persistence` | Disable session persistence so sessions are not saved to disk and cannot be resumed (print mode only) | `claude -p --no-session-persistence "query"` |
 | `--output-format` | Specify output format for print mode (options: text, json, stream-json) | `claude -p "query" --output-format json` |
 | `--enable-auto-mode` | Unlock auto mode in the Shift+Tab cycle. Requires a Team, Enterprise, or API plan and Claude Sonnet 4.6 or Opus 4.6 | `claude --enable-auto-mode` |
-| `--permission-mode` | Begin in a specified permission mode. Accepts default, acceptEdits, plan, auto, dontAsk, or bypassPermissions. Overrides defaultMode from settings files | `claude` |
+| `--permission-mode` | Begin in a specified permission mode. Accepts default, acceptEdits, plan, auto, dontAsk, or bypassPermissions. Overrides defaultMode from settings files | `claude --permission-mode plan` |
+| `--permission-prompt-tool` | Specify an MCP tool to handle permission prompts in non-interactive mode  | `claude -p --permission-prompt-tool mcp_auth_tool "query"` |
+| `--plugin-dir` | Load plugins from a directory for this session only. Each flag takes one path. Repeat the flag for multiple directories: --plugin-dir A --plugin-dir B | `claude --plugin-dir ./my-plugins` |
+| `--print, -p` | Print response without interactive mode (see Agent SDK documentation for programmatic usage details) | `claude -p "query"` |
+| `--remote` | Create a new web session on claude.ai with the provided task description | `claude --remote "Fix the login bug"` |
+| `--remote-control, --rc` | Start an interactive session with Remote Control enabled so you can also control it from claude.ai or the Claude app. Optionally pass a name for the session | `claude --remote-control "My Project"` |
+| `--remote-control-session-name-prefix <prefix>` | Prefix for auto-generated Remote Control session names when no explicit name is set. Defaults to your machine’s hostname, producing names like myhost-graceful-unicorn. Set CLAUDE_REMOTE_CONTROL_SESSION_NAME_PREFIX for the same effect | `claude remote-control --remote-control-session-name-prefix dev-box` |
+| `--replay-user-messages` | Re-emit user messages from stdin back on stdout for acknowledgment. Requires --input-format stream-json and --output-format stream-json | `claude -p --input-format stream-json --output-format stream-json --replay-user-messages` |
+| `--resume, -r` | Resume a specific session by ID or name, or show an interactive picker to choose a session | `claude --resume auth-refactor` |
+| `--session-id` | Use a specific session ID for the conversation (must be a valid UUID) | `claude --session-id "550e8400-e29b-41d4-a716-446655440000"` |
+| `--setting-sources` | Use a specific session ID for the conversation (must be a valid UUID) | `claude --session-id "550e8400-e29b-41d4-a716-446655440000"` |
+| `--setting-sources` | Comma-separated list of setting sources to load (user, project, local) | `claude --setting-sources user,project` |
+| `--settings` | Path to a settings JSON file or a JSON string to load additional settings from | `claude --settings ./settings.json` |
+| `--strict-mcp-config` | Only use MCP servers from --mcp-config, ignoring all other MCP configurations | `claude --strict-mcp-config --mcp-config ./mcp.json` |
+| `--system-prompt` | Replace the entire system prompt with custom text | `claude --system-prompt "You are a Python expert"` |
+| `--system-prompt-file` | Load system prompt from a file, replacing the default prompt | `claude --system-prompt-file ./custom-prompt.txt` |
+| `--teleport` | Resume a web session in your local terminal | `claude --teleport` |
+| `--teammate-mode` | Set how agent team teammates display: auto (default), in-process, or tmux. See Choose a display mode | `claude --teammate-mode in-process` |
+| `--tmux` | Create a tmux session for the worktree. Requires --worktree. Uses iTerm2 native panes when available; pass --tmux=classic for traditional tmux | `claude -w feature-auth --tmux` |
+| `--tools` | Restrict which built-in tools Claude can use. Use "" to disable all, "default" for all, or tool names like "Bash,Edit,Read" | `claude --tools "Bash,Edit,Read"` |
+| `--verbose` | Enable verbose logging, shows full turn-by-turn output | `claude --verbose` |
+| `--version, -v` | Output the version number | `claude -v` |
+| `--worktree, -w` | Start Claude in an isolated git worktree at <repo>/.claude/worktrees/<name>. If no name is given, one is auto-generated | `claude -w feature-auth` |
+
+
+
+| `` |  | `claude` |
+| `` |  | `claude` |
 | `` |  | `claude` |
 | `` |  | `claude` |
