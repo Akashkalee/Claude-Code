@@ -108,7 +108,7 @@ Claude Code provides four flags for customizing the system prompt. All four work
 | `--append-system-prompt` | Appends to the default prompt | `claude --append-system-prompt "Always use TypeScript"` |
 | `--append-system-prompt-file` | Appends file contents to the default prompt | `claude --append-system-prompt-file ./style-rules.txt` |
 
---system-prompt and --system-prompt-file are mutually exclusive. The append flags can be combined with either replacement flag.
+`--system-prompt` and `--system-prompt-file` are mutually exclusive. The append flags can be combined with either replacement flag.
 
 For most use cases, use an append flag. Appending preserves Claude Code's built-in capabilities while adding your requirements. Use a replacement flag only when you need complete control over the system prompt.
 
