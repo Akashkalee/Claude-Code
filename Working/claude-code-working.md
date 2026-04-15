@@ -22,8 +22,9 @@ A command-line interface (CLI) that lets you interact with Claude directly from 
 
 #### Tool use under the hood — Claude Code uses tools like file read/write, bash execution, and search to act on your behalf. It shows you what it's doing and asks for confirmation on potentially impactful actions.
 #### MCP support — It supports Model Context Protocol (MCP) servers, so you can extend it with integrations like GitHub, databases, or custom tools.
+#
 
-### What is CLAUDE.md?
+## What is CLAUDE.md?
 CLAUDE.md is a markdown file that Claude automatically reads at the start of each session. It holds project-specific instructions you'd otherwise repeat in every prompt — structure, conventions, workflows, style — loaded before every conversation. Builder.io
 Your CLAUDE.md file becomes part of Claude's system prompt. Every conversation starts with this context already loaded, eliminating the need to explain basic project information repeatedly. Claude
 
