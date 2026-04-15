@@ -51,3 +51,9 @@ Command	Description	Example
 | `claude plugin` | Manage Claude Code plugins. Alias: claude plugins. See plugin reference for subcommands | `claude plugin install code-review@claude-plugins-official ` |
 | claude remote-control | Start a Remote Control server to control Claude Code from Claude.ai or the Claude app. Runs in server mode (no local interactive session). See Server mode flags | `claude remote-control --name "My Project"` |
 | claude setup-token | Generate a long-lived OAuth token for CI and scripts. Prints the token to the terminal without saving it. Requires a Claude subscription. See Generate a long-lived token  |`claude setup-token`  |
+
+
+### CLI Flags
+Customize claude code behavior with these command-line flags. claude --help does not list every flag, so a flag's absence from --help does not mean it is unavailable.
+
+
