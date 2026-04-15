@@ -56,4 +56,17 @@ Command	Description	Example
 ### CLI Flags
 Customize claude code behavior with these command-line flags. claude --help does not list every flag, so a flag's absence from --help does not mean it is unavailable.
 
-
+| `--add-dir ` | Add additional working directores for Claude to read and edit files. Grants file access; most `.claude/` configuration is not discovered from these directories. Validates each path exists as a directory | `claude -add-dir ../apps ../lib` |
+| `--agent` | Speacify an agent for the current session (overrides the agent setting | `claude --agent my-custom agent` |
+| `--agents` | Define custom subagents dynamically via JSON. Uses the same field names as subagent frontmatter, plus a prompt field for the agent's instructions | `claude --agnets '{"reviewer": {"description":"Reviews code", "prompt":"You are a code reviewer"}}' ` |
+| `--allow-dangerously-skip-permissions` | Add `bypassPermissions` to the `Shift+Tab` mode cycle without starting in it. Lets you begin in a different mode like `plan` and switch to bypassPermissions later.  | `claude --permission-mode plan --allow-dangerously-skip-permissions` |
+| `--allowedTools` | Tools that execute without prompting for permission. See permission rule syntax for pattern matching. To restrict which tools are available, use --tools instead | `"Bash(git log *)" "Bash(git diff *)" "Read" ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
+| ` ` |   | `claude ` |
