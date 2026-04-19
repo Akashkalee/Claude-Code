@@ -35,6 +35,8 @@ Complete reference for Claude Code command-line inference, including commands an
 
 
 ## [Commands](Working/Commands.md)
+Complete reference for commands available in Claude Code, including built-in commands and bundled skills.
+
 
 
 
