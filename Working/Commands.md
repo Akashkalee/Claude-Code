@@ -30,12 +30,12 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | `/cost` | Show token usage statistics. See cost tracking guide for subscription-specific details |
 | `/debug [description]` | Enable debug logging for the current session and troubleshoot issues by reading the session debug log. Debug logging is off by default unless you started with claude --debug, so running /debug mid-session starts capturing logs from that point forward. Optionally describe the issue to focus the analysis |
 | `/desktop` | Continue the current session in the Claude Code Desktop app. macOS and Windows only. Alias: /app |
-| `/diff` |  |
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
-| `` |  |
+| `/diff` | Open an interactive diff viewer showing uncommitted changes and per-turn diffs. Use left/right arrows to switch between the current git diff and individual Claude turns, and up/down to browse files |
+| `/doctor` | Diagnose and verify your Claude Code installation and settings. Results show with status icons. Press f to have Claude fix any reported issues |
+| `/effort [level\|auto]` | Set the model effort level. Accepts low, medium, high, xhigh, or max; available levels depend on the model and max is session-only. auto resets to the model default. Without an argument, opens an interactive slider; use left and right arrows to pick a level and Enter to apply. Takes effect immediately without waiting for the current response to finish |
+| `/exit` | Exit the CLI. Alias: /quit |
+| `/export [filename]` | Export the current conversation as plain text. With a filename, writes directly to that file. Without, opens a dialog to copy to clipboard or save to a file |
+| `/extra-usage` | Configure extra usage to keep working when rate limits are hit |
+| `/fast [on\|off]` | Toggle fast mode on or off |
+| `/feedback [report]` | Submit feedback about Claude Code. Alias: /bug  |
+| `/fewer-permission-prompts` | Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts |
