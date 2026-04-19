@@ -10,3 +10,7 @@ The table below lists all the commands included in Claude Code. Entries marked S
 Not every command appears for every user. Availability depends on your platform, plan, and environment. For example, /desktop only shows on macOS and Windows, and /upgrade only shows on Pro and Max plans.
 
 In the table below, <arg> indicates a required argument and [arg] indicates an optional one.
+
+| Command | Purpose |
+| --- | --- |
+| `/add-dir <path>` | Add a working directory for file access during the current session. Most `.claude/` configuration is not discovered from the added directory |
