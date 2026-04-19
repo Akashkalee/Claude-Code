@@ -22,7 +22,7 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | `/chrome` | Configure Claude in Chrome settings |
 | `/claude-api` | Load Claude API reference material for your project’s language (Python, TypeScript, Java, Go, Ruby, C#, PHP, or cURL) and Managed Agents reference. Covers tool use, streaming, batches, structured outputs, and common pitfalls. Also activates automatically when your code imports anthropic or @anthropic-ai/sdk |
 | `/clear` | Start a new conversation with empty context. The previous conversation stays available in /resume. To free up context while continuing the same conversation, use /compact instead. Aliases: /reset, /new |
-| `/color [color|default]` | Set the prompt bar color for the current session. Available colors: red, blue, green, yellow, purple, orange, pink, cyan. Use default to reset |
+| `/color [color\|default]` | Set the prompt bar color for the current session. Available colors: red, blue, green, yellow, purple, orange, pink, cyan. Use default to reset |
 | `/compact [instructions]` | Free up context by summarizing the conversation so far. Optionally pass focus instructions for the summary. See how compaction handles rules, skills, and memory files |
 | `/config` | Open the Settings interface to adjust theme, model, output style, and other preferences. Alias: /settings |
 | `/context` | Visualize current context usage as a colored grid. Shows optimization suggestions for context-heavy tools, memory bloat, and capacity warnings |
@@ -30,7 +30,7 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | `/cost` | Show token usage statistics. See cost tracking guide for subscription-specific details |
 | `/debug [description]` | Enable debug logging for the current session and troubleshoot issues by reading the session debug log. Debug logging is off by default unless you started with claude --debug, so running /debug mid-session starts capturing logs from that point forward. Optionally describe the issue to focus the analysis |
 | `/desktop` | Continue the current session in the Claude Code Desktop app. macOS and Windows only. Alias: /app |
-| `` |  |
+| `/diff` |  |
 | `` |  |
 | `` |  |
 | `` |  |
