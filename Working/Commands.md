@@ -39,3 +39,42 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | `/fast [on\|off]` | Toggle fast mode on or off |
 | `/feedback [report]` | Submit feedback about Claude Code. Alias: /bug  |
 | `/fewer-permission-prompts` | Scan your transcripts for common read-only Bash and MCP tool calls, then add a prioritized allowlist to project .claude/settings.json to reduce permission prompts |
+| `/focus` | Toggle the focus view, which shows only your last prompt, a one-line tool-call summary with edit diffstats, and the final response. The selection persists across sessions. Only available in fullscreen rendering |
+| `/heapdump` | Write a JavaScript heap snapshot and a memory breakdown to ~/Desktop for diagnosing high memory usage. See troubleshooting |
+| `/help` | Show help and available commands |
+| `/hooks` | View hook configurations for tool events |
+| `/ide` | Manage IDE integrations and show status |
+| `/init` | Initialize project with a CLAUDE.md guide. Set CLAUDE_CODE_NEW_INIT=1 for an interactive flow that also walks through skills, hooks, and personal memory files |
+| `/insights` | Generate a report analyzing your Claude Code sessions, including project areas, interaction patterns, and friction points |
+| `/install-github-app` | Set up the Claude GitHub Actions app for a repository. Walks you through selecting a repo and configuring the integration |
+| `/install-slack-app` | Install the Claude Slack app. Opens a browser to complete the OAuth flow |
+| `/keybindings` | Open or create your keybindings configuration file |
+| `/login` | Sign in to your Anthropic account |
+| `/logout` | Sign out from your Anthropic account |
+| `/loop [interval] [prompt]` | Run a prompt repeatedly while the session stays open. Omit the interval and Claude self-paces between iterations. Omit the prompt and Claude runs an autonomous maintenance check, or the prompt in .claude/loop.md if present. Example: /loop 5m check if the deploy finished. See Run prompts on a schedule. Alias: /proactive |
+| `/mcp` | Manage MCP server connections and OAuth authentication |
+| `/memory` | Edit CLAUDE.md memory files, enable or disable auto-memory, and view auto-memory entries |
+| `/mobile` | Show QR code to download the Claude mobile app. Aliases: /ios, /android |
+| `/model [model]` | Select or change the AI model. For models that support it, use left/right arrows to adjust effort level. With no argument, opens a picker that asks for confirmation when the conversation has prior output, since the next response re-reads the full history without cached context. Once confirmed, the change applies without waiting for the current response to finish |
+| `/passes` | Share a free week of Claude Code with friends. Only visible if your account is eligible |
+| `/permissions` | Manage allow, ask, and deny rules for tool permissions. Opens an interactive dialog where you can view rules by scope, add or remove rules, manage working directories, and review recent auto mode denials. Alias: /allowed-tools |
+| `/plan [description]` | Enter plan mode directly from the prompt. Pass an optional description to enter plan mode and immediately start with that task, for example /plan fix the auth bug |
+| `/plugin` | Manage Claude Code plugins |
+| `/powerup` | Discover Claude Code features through quick interactive lessons with animated demos |
+| `/pr-comments [PR]` | Removed in v2.1.91. Ask Claude directly to view pull request comments instead. On earlier versions, fetches and displays comments from a GitHub pull request; automatically detects the PR for the current branch, or pass a PR URL or number. Requires the gh CLI |
+| `/privacy-settings` | View and update your privacy settings. Only available for Pro and Max plan subscribers |
+| `/recap` | Generate a one-line summary of the current session on demand. See Session recap for the automatic recap that appears after you’ve been away |
+| `/release-notes` | View the changelog in an interactive version picker. Select a specific version to see its release notes, or choose to show all versions |
+| `/reload-plugins` | Reload all active plugins to apply pending changes without restarting. Reports counts for each reloaded component and flags any load errors |
+| `/remote-control` | Make this session available for remote control from claude.ai. Alias: /rc |
+| `/remote-env` | Configure the default remote environment for web sessions started with --remote |
+| `/rename [name]` | Rename the current session and show the name on the prompt bar. Without a name, auto-generates one from conversation history |
+| `/resume [session]` | Resume a conversation by ID or name, or open the session picker. Alias: /continue |
+| `/review [PR]` | Review a pull request locally in your current session. For a deeper cloud-based review, see /ultrareview |
+| `/rewind` | Rewind the conversation and/or code to a previous point, or summarize from a selected message. See checkpointing. Aliases: /checkpoint, /undo |
+| `/sandbox` | Toggle sandbox mode. Available on supported platforms only |
+| `/schedule [description]` | Create, update, list, or run routines. Claude walks you through the setup conversationally. Alias: /routines |
+| `/security-review` | Analyze pending changes on the current branch for security vulnerabilities. Reviews the git diff and identifies risks like injection, auth issues, and data exposure |
+| `/setup-bedrock` | Configure Amazon Bedrock authentication, region, and model pins through an interactive wizard. Only visible when CLAUDE_CODE_USE_BEDROCK=1 is set. First-time Bedrock users can also access this wizard from the login screen |
+| `/setup-vertex` | Configure Google Vertex AI authentication, project, region, and model pins through an interactive wizard. Only visible when CLAUDE_CODE_USE_VERTEX=1 is set. First-time Vertex AI users can also access this wizard from the login screen |
+| `` |  |
