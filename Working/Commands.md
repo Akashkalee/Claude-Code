@@ -14,3 +14,28 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | Command | Purpose |
 | --- | --- |
 | `/add-dir <path>` | Add a working directory for file access during the current session. Most `.claude/` configuration is not discovered from the added directory |
+| `/agents` | Manage agent configurations |
+| `/autofix-pr [prompt]` | Spawn a Claude Code on the web session that watches the current branch’s PR and pushes fixes when CI fails or reviewers leave comments. Detects the open PR from your checked-out branch with `gh pr view`; to watch a different PR, check out its branch first. By default the remote session is told to fix every CI failure and review comment; pass a prompt to give it different instructions, for example `/autofix-pr only fix lint and type errors`. Requires the `gh` CLI and access to Claude Code on the web |
+| `/batch <instruction>` | Orchestrate large-scale changes across a codebase in parallel. Researches the codebase, decomposes the work into 5 to 30 independent units, and presents a plan. Once approved, spawns one background agent per unit in an isolated git worktree. Each agent implements its unit, runs tests, and opens a pull request. |
+| `/branch [name]` | Create a branch of the current conversation at this point. Switches you into the branch and preserves the original, which you can return to with /resume. Alias: /fork |
+| `/btw <question>` | Ask a quick side question without adding to the conversation |
+| `/chrome` | Configure Claude in Chrome settings |
+| `/claude-api` | Load Claude API reference material for your project’s language (Python, TypeScript, Java, Go, Ruby, C#, PHP, or cURL) and Managed Agents reference. Covers tool use, streaming, batches, structured outputs, and common pitfalls. Also activates automatically when your code imports anthropic or @anthropic-ai/sdk |
+| `/clear` | Start a new conversation with empty context. The previous conversation stays available in /resume. To free up context while continuing the same conversation, use /compact instead. Aliases: /reset, /new |
+| `/color [color|default]` | Set the prompt bar color for the current session. Available colors: red, blue, green, yellow, purple, orange, pink, cyan. Use default to reset |
+| `/compact [instructions]` | Free up context by summarizing the conversation so far. Optionally pass focus instructions for the summary. See how compaction handles rules, skills, and memory files |
+| `/config` | Open the Settings interface to adjust theme, model, output style, and other preferences. Alias: /settings |
+| `/context` | Visualize current context usage as a colored grid. Shows optimization suggestions for context-heavy tools, memory bloat, and capacity warnings |
+| `/copy [N]` | Copy the last assistant response to clipboard. Pass a number N to copy the Nth-latest response: /copy 2 copies the second-to-last. When code blocks are present, shows an interactive picker to select individual blocks or the full response. Press w in the picker to write the selection to a file instead of the clipboard, which is useful over SSH |
+| `/cost` | Show token usage statistics. See cost tracking guide for subscription-specific details |
+| `/debug [description]` | Enable debug logging for the current session and troubleshoot issues by reading the session debug log. Debug logging is off by default unless you started with claude --debug, so running /debug mid-session starts capturing logs from that point forward. Optionally describe the issue to focus the analysis |
+| `/desktop` | Continue the current session in the Claude Code Desktop app. macOS and Windows only. Alias: /app |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
+| `` |  |
