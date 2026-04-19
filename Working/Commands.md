@@ -77,4 +77,22 @@ In the table below, <arg> indicates a required argument and [arg] indicates an o
 | `/security-review` | Analyze pending changes on the current branch for security vulnerabilities. Reviews the git diff and identifies risks like injection, auth issues, and data exposure |
 | `/setup-bedrock` | Configure Amazon Bedrock authentication, region, and model pins through an interactive wizard. Only visible when CLAUDE_CODE_USE_BEDROCK=1 is set. First-time Bedrock users can also access this wizard from the login screen |
 | `/setup-vertex` | Configure Google Vertex AI authentication, project, region, and model pins through an interactive wizard. Only visible when CLAUDE_CODE_USE_VERTEX=1 is set. First-time Vertex AI users can also access this wizard from the login screen |
-| `` |  |
+| `/simplify [focus]` |  Review your recently changed files for code resue, quality, and efficiency issues, then fix them. Spawns three review agents in parallel, aggregates their findings, and applies fixes. Pass text to focus on specific concerns: `/simplify focus on memory efficiency` |
+| `/skills` | List available skills. Press t to sort by token count |
+| `/stats` | Visualize daily usage, session history, streaks, and model preferences |
+| `/status` | Open the Settings interface (Status tab) showing version, model, account, and connectivity. Works while Claude is responding, without waiting for the current response to finish |
+| `/statusline` | Configure Claude Code’s status line. Describe what you want, or run without arguments to auto-configure from your shell prompt |
+| `/stickers` | Order Claude Code stickers |
+| `/tasks` | List and manage background tasks. Also available as /bashes |
+| `/team-onboarding` | Generate a team onboarding guide from your Claude Code usage history. Claude analyzes your sessions, commands, and MCP server usage from the past 30 days and produces a markdown guide a teammate can paste as a first message to get set up quickly |
+| `/teleport` | Pull a Claude Code on the web session into this terminal: opens a picker, then fetches the branch and conversation. Also available as /tp. Requires a claude.ai subscription |
+| `/terminal-setup` | Configure terminal keybindings for Shift+Enter and other shortcuts. Only visible in terminals that need it, like VS Code, Alacritty, or Warp |
+| `/theme` | Change the color theme. Includes an auto option that follows your terminal’s dark or light mode, light and dark variants, colorblind-accessible (daltonized) themes, and ANSI themes that use your terminal’s color palette |
+| `/tui [default|fullscreen]` | Set the terminal UI renderer and relaunch into it with your conversation intact. fullscreen enables the flicker-free alt-screen renderer. With no argument, prints the active renderer |
+| `/ultraplan <prompt>` | Draft a plan in an ultraplan session, review it in your browser, then execute remotely or send it back to your terminal |
+| `/ultrareview [PR]` | Run a deep, multi-agent code review in a cloud sandbox with ultrareview. Includes 3 free runs on Pro and Max, then requires extra usage |
+| `/upgrade` | Open the upgrade page to switch to a higher plan tier |
+| `/usage` | Show plan usage limits and rate limit status |
+| `/vim` | Removed in v2.1.92. To toggle between Vim and Normal editing modes, use /config → Editor mode |
+| `/voice` | Toggle push-to-talk voice dictation. Requires a Claude.ai account |
+| `/web-setup` | Connect your GitHub account to Claude Code on the web using your local gh CLI credentials. /schedule prompts for this automatically if GitHub isn’t connected |
